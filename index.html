@@ -4,7 +4,10 @@
     
     <head>
         <title>Accueil - D3Transmo</title>
-        <?php include("head.php"); ?>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" type="image/png" href="favicon.png" sizes="16x16" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <meta charset="utf-8" />
     </head>
     
     <body>
@@ -18,13 +21,18 @@
                     <a class="menu-link-last" href="add.php"> <li class="menu-item"><img src="add.png"><br><span class="textlist">Ajouter une transmo.</span></li></a>
                 </ul>
             </div>
-            <?php include("logo.php"); ?>
+            
+            <h1>
+                <a id="logo" href="home.php"><img src="logo.png" alt="D3Transmog" /></a>
+                <a id="logomobile" href="home.php"><img src="logomobile.png" alt="D3Transmog" /></a>
+                <a id="logomini" href="home.php"><img src="logomini.png" alt="D3Transmog" /></a>
+            </h1>
             
             
 
             <div id="main">
 
-                <h2>Bienvenue sur D3Transmo !</h2>
+                <h2>Bienvenue sur le meilleur site Internet</h2>
                 <div class="article">
                     <p>
                         Eodem tempore Serenianus ex duce, cuius ignavia populatam in Phoenice Celsen ante rettulimus, pulsatae maiestatis imperii reus iure postulatus ac lege, incertum qua potuit suffragatione absolvi, aperte convictus familiarem suum cum pileo, quo caput operiebat, incantato vetitis artibus ad templum misisse fatidicum, quaeritatum expresse an ei firmum portenderetur imperium, ut cupiebat, et cunctum.<br /><br />
@@ -37,7 +45,7 @@
                     </p>
                 </div>
 
-                <h2>Un autre article...</h2>
+                <h2>Salixor la tepu du tiékar</h2>
                 <div class="article">
                     <p>
                         Restabat ut Caesar post haec properaret accitus et abstergendae causa suspicionis sororem suam, eius uxorem, Constantius ad se tandem desideratam venire multis fictisque blanditiis hortabatur. quae licet ambigeret metuens saepe cruentum, spe tamen quod eum lenire poterit ut germanum profecta, cum Bithyniam introisset, in statione quae Caenos Gallicanos appellatur, absumpta est vi febrium repentina. cuius post obitum maritus contemplans cecidisse fiduciam qua se fultum existimabat, anxia cogitatione, quid moliretur haerebat.<br /><br />
@@ -52,8 +60,19 @@
 
 
 
-            <?php include("footer.php"); ?>
-            <?php include("sidebarjs.php"); ?>
+            <footer>
+                <a href="contact.php">Me contacter</a>
+            </footer>
+            
+            <script>
+                var initTopPosition= $('#sidebar').offset().top;   
+                $(window).scroll(function(){
+                    if($(window).scrollTop() > (initTopPosition + 90))
+                        $('#sidebar').css({'position':'fixed','top':'-90px'});
+                    else
+                        $('#sidebar').css({'position':'absolute','top':initTopPosition+'px'});
+                });
+            </script>
 
         </div>
     </body>
